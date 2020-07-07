@@ -53,3 +53,17 @@ C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Microso
 C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\CollectionTrackerAPI.deps.json
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\CollectionTrackerAPI.runtimeconfig.json
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\CollectionTrackerAPI.runtimeconfig.dev.json
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\CollectionTrackerAPI.dll
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\CollectionTrackerAPI.pdb
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.csproj.CoreCompileInputs.cache
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.dll
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.pdb
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.genruntimeconfig.cache
