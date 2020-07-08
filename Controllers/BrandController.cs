@@ -108,7 +108,7 @@ namespace CollectionTrackerAPI.Controllers
                 {
                     var updateBrand = _mapper.Map<BrandViewModel, Brand>(model);
                     _context.Update(updateBrand);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Ok(_mapper.Map<Brand, BrandViewModel>(updateBrand));
                     }
@@ -138,7 +138,7 @@ namespace CollectionTrackerAPI.Controllers
                 if(deleteBrand != null) 
                 {
                     _context.Remove(deleteBrand);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Ok(_mapper.Map<Brand, BrandViewModel>(deleteBrand));
                     }

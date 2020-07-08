@@ -80,7 +80,7 @@ namespace CollectionTrackerAPI.Controllers
                 {
                     var updateCollection = _mapper.Map<CollectionViewModel, Collection>(model);
                     _context.Update(updateCollection);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Ok(_mapper.Map<Collection, CollectionViewModel>(updateCollection));
                     }
@@ -111,7 +111,7 @@ namespace CollectionTrackerAPI.Controllers
                 {
                     var newCollection = _mapper.Map<CollectionViewModel, Collection>(model);
                     _context.Add(newCollection);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Created($"/api/Collection/{newCollection.CollectionId}", _mapper.Map<Collection, CollectionViewModel>(newCollection));
                     }
@@ -142,7 +142,7 @@ namespace CollectionTrackerAPI.Controllers
                 if(deleteCollection != null)
                 {
                     _context.Remove(deleteCollection);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Ok(_mapper.Map<Collection, CollectionViewModel>(deleteCollection));
                     }

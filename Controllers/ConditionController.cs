@@ -96,7 +96,7 @@ namespace CollectionTrackerAPI.Controllers
                 {
                     var updateCondition = _mapper.Map<ConditionViewModel, Condition>(model);
                     _context.Update(updateCondition);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Ok(_mapper.Map<Condition, ConditionViewModel>(updateCondition));
                     }
@@ -127,7 +127,7 @@ namespace CollectionTrackerAPI.Controllers
                 {
                     var newCategory = _mapper.Map<CategoryViewModel, Category>(model);
                     _context.Add(newCategory);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Created($"/api/Category/{newCategory.CategoryId}", _mapper.Map<Category, CategoryViewModel>(newCategory));
                     }
@@ -158,7 +158,7 @@ namespace CollectionTrackerAPI.Controllers
                 if(deleteCategory != null)
                 {
                     _context.Remove(deleteCategory);
-                    if(_context.SaveChanges() == 0)
+                    if(_context.SaveChanges() == 1)
                     {
                         return Ok(_mapper.Map<Category, CategoryViewModel>(deleteCategory));
                     }
