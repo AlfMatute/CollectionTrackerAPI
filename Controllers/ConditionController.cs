@@ -49,18 +49,33 @@ namespace CollectionTrackerAPI.Controllers
         }
 
         [HttpGet("{active:bool}")]
-        public ActionResult<ConditionViewModel> Get(bool active)
+        public ActionResult<ConditionViewModel> Get(bool? active)
         {
             try
             {
-                var conditions = _context.Conditions.Where(c => c.Active == active).ToList();
-                if(conditions != null)
+                if (active.HasValue)
                 {
-                    return Ok(_mapper.Map<IEnumerable<Condition>, IEnumerable<ConditionViewModel>>(conditions));
+                    var conditions = _context.Conditions.Where(c => c.Active == active.Value).ToList();
+                    if (conditions != null)
+                    {
+                        return Ok(_mapper.Map<IEnumerable<Condition>, IEnumerable<ConditionViewModel>>(conditions));
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
                 }
                 else
                 {
-                    return NotFound();
+                    var conditions = _context.Conditions.ToList();
+                    if(conditions != null)
+                    {
+                        return Ok(_mapper.Map <IEnumerable<Condition>, IEnumerable<ConditionViewModel>>(conditions));
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
                 }
             }
             catch(Exception ex)

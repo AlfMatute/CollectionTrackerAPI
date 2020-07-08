@@ -78,7 +78,7 @@ namespace CollectionTrackerAPI.Controllers
                 {
                     var newBrand = _mapper.Map<BrandViewModel, Brand>(model);
                     _context.Add(newBrand);
-                    if(_context.SaveChanges() == 0)
+                    if (_context.SaveChanges() == 1)
                     {
                         return Created($"/api/Brand/{newBrand.BrandId}", _mapper.Map<Brand, BrandViewModel>(newBrand));
                     }

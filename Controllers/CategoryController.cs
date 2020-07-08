@@ -50,18 +50,33 @@ namespace CollectionTrackerAPI.Controllers
         }
 
         [HttpGet("{active:bool}")]
-        public ActionResult<IEnumerable<CategoryViewModel>> Get(bool active)
+        public ActionResult<IEnumerable<CategoryViewModel>> Get(bool? active)
         {
             try
             {
-                var categories = _context.Categories.Where(c => c.Active == active).ToList();
-                if(categories != null)
+                if (active.HasValue)
                 {
-                    return Ok(_mapper.Map<IEnumerable<Category>, IEnumerable<CategoryViewModel>>(categories));
+                    var categories = _context.Categories.Where(c => c.Active == active).ToList();
+                    if (categories != null)
+                    {
+                        return Ok(_mapper.Map<IEnumerable<Category>, IEnumerable<CategoryViewModel>>(categories));
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
                 }
                 else
                 {
-                    return NotFound();
+                    var categories = _context.Categories.ToList();
+                    if(categories != null)
+                    {
+                        return Ok(_mapper.Map<IEnumerable<Category>, IEnumerable<CategoryViewModel>>(categories));
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
                 }
             }
             catch(Exception ex)

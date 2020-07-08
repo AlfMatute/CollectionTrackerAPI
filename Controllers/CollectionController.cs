@@ -48,7 +48,6 @@ namespace CollectionTrackerAPI.Controllers
             }
         }
 
-        //[HttpGet("{username:string}")]
         [HttpGet]
         public ActionResult<IEnumerable<CollectionViewModel>> Get(string username)
         {
