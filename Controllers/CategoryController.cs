@@ -49,7 +49,7 @@ namespace CollectionTrackerAPI.Controllers
             }
         }
 
-        [HttpGet("{active:bool}")]
+        [HttpGet("{active:bool?}")]
         public ActionResult<IEnumerable<CategoryViewModel>> Get(bool? active)
         {
             try
@@ -149,7 +149,7 @@ namespace CollectionTrackerAPI.Controllers
             }
         }
 
-        [HttpDelete("id:int")]
+        [HttpDelete("{id:int}")]
         public ActionResult<CategoryViewModel> Delete(int id)
         {
             try

@@ -48,7 +48,7 @@ namespace CollectionTrackerAPI.Controllers
             }
         }
 
-        [HttpGet("{active:bool}")]
+        [HttpGet("{active:bool?}")]
         public ActionResult<ConditionViewModel> Get(bool? active)
         {
             try
@@ -119,21 +119,21 @@ namespace CollectionTrackerAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult<CategoryViewModel> Create([FromBody]CategoryViewModel model)
+        public ActionResult<ConditionViewModel> Create([FromBody]ConditionViewModel model)
         {
             try
             {
                 if(ModelState.IsValid)
                 {
-                    var newCategory = _mapper.Map<CategoryViewModel, Category>(model);
-                    _context.Add(newCategory);
+                    var newCondition = _mapper.Map<ConditionViewModel, Condition>(model);
+                    _context.Add(newCondition);
                     if(_context.SaveChanges() == 1)
                     {
-                        return Created($"/api/Category/{newCategory.CategoryId}", _mapper.Map<Category, CategoryViewModel>(newCategory));
+                        return Created($"/api/Condition/{newCondition.ConditionId}", _mapper.Map<Condition, ConditionViewModel>(newCondition));
                     }
                     else
                     {
-                        return BadRequest("Failed to create the new Category");
+                        return BadRequest("Failed to create the new Condition");
                     }
                 }
                 else
@@ -143,24 +143,24 @@ namespace CollectionTrackerAPI.Controllers
             }
             catch(Exception ex)
             {
-                string error = $"Error when creating a new Category: {ex.Message}";
+                string error = $"Error when creating a new Condition: {ex.Message}";
                 _logger.LogError(error);
                 return BadRequest(error);
             }
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult<CategoryViewModel> Delete(int id)
+        public ActionResult<ConditionViewModel> Delete(int id)
         {
             try
             {
-                var deleteCategory = _context.Categories.Where(c => c.CategoryId == id).FirstOrDefault();
-                if(deleteCategory != null)
+                var deleteCondition = _context.Conditions.Where(c => c.ConditionId == id).FirstOrDefault();
+                if(deleteCondition != null)
                 {
-                    _context.Remove(deleteCategory);
+                    _context.Remove(deleteCondition);
                     if(_context.SaveChanges() == 1)
                     {
-                        return Ok(_mapper.Map<Category, CategoryViewModel>(deleteCategory));
+                        return Ok(_mapper.Map<Condition, ConditionViewModel>(deleteCondition));
                     }
                     else
                     {
@@ -174,7 +174,7 @@ namespace CollectionTrackerAPI.Controllers
             }
             catch(Exception ex)
             {
-                string error = $"Error when deleting the category: {ex.Message}";
+                string error = $"Error when deleting the condition: {ex.Message}";
                 _logger.LogWarning(error);
                 return BadRequest(error);
             }
