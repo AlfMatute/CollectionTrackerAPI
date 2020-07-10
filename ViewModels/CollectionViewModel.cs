@@ -20,14 +20,21 @@ namespace CollectionTrackerAPI.ViewModels
 
         public double ArticleCost { get; set; }
 
-        [Required]
+        
         public ConditionViewModel Condition { get; set; }
+
+        [Required]
+        public int ConditionId { get; set; }
 
         public DateTime FabricationDate { get; set; }
 
         public CategoryViewModel Category { get; set; }
 
+        public int CategoryId { get; set; }
+
         public BrandViewModel Brand { get; set; }
+
+        public int BrandId { get; set; }
 
         [MaxLength(250)]
         public string Description { get; set; }

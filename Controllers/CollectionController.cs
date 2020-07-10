@@ -6,6 +6,7 @@ using AutoMapper;
 using CollectionTrackerAPI.Models;
 using CollectionTrackerAPI.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace CollectionTrackerAPI.Controllers
@@ -30,7 +31,11 @@ namespace CollectionTrackerAPI.Controllers
         {
             try
             {
-                var collection = _context.Collections.Where(c => c.CollectionId == id).FirstOrDefault();
+                var collection = _context.Collections.Where(c => c.CollectionId == id)
+                    .Include(b => b.Brand)
+                    .Include(c => c.Category)
+                    .Include(c => c.Condition)
+                    .FirstOrDefault();
                 if(collection != null)
                 {
                     return Ok(_mapper.Map<Collection, CollectionViewModel>(collection));
@@ -53,7 +58,11 @@ namespace CollectionTrackerAPI.Controllers
         {
             try
             {
-                var collection = _context.Collections.Where(c => c.CollectionUser.UserName == username).ToList();
+                var collection = _context.Collections.Where(c => c.CollectionUser.UserName == username)
+                    .Include(b => b.Brand)
+                    .Include(c => c.Category)
+                    .Include(c => c.Condition)
+                    .ToList();
                 if (collection != null)
                 {
                     return Ok(_mapper.Map<IEnumerable<Collection>, IEnumerable<CollectionViewModel>>(collection));
@@ -72,7 +81,7 @@ namespace CollectionTrackerAPI.Controllers
         }
 
         [HttpPut]
-        public ActionResult<CollectionViewModel> Put(CollectionViewModel model)
+        public ActionResult<CollectionViewModel> Put([FromBody]CollectionViewModel model)
         {
             try
             {
@@ -103,7 +112,7 @@ namespace CollectionTrackerAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult<CollectionViewModel> Create(CollectionViewModel model)
+        public ActionResult<CollectionViewModel> Create([FromBody]CollectionViewModel model)
         {
             try
             {
