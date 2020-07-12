@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+Ap5NZmlfE+/p1DxIJUP4wAAAAACAAAAAAAQZgAAAAEAACAAAACfOHWE9jIxc7hbNvvL8ZGFNuDVrCSoTK7fYiw2a4H/dwAAAAAOgAAAAAIAACAAAAAjIjRGywRaps2UcdEKdfM76JrLKC5KzoNvnbqxfOn9NoAAAABfNHg1Kk8n2fQ82PPJIFp6o+ltohVi/BREFMljERZcg1HlbctoGWPHZvagksdB5E9wpqulBWzmfrKiTiNLDB5kdJFV5idO4a0+mGrXpmugsuiM7POwfoY8dbLKU8czQkeSBWfT7nED9w6MBDb0w8Edn25TT59vQ8h65UNztxZKG0AAAADNh/MBX8gXSwW0wnnKS277j3TADPSNQebRcz3VqaWxUBLMaRxu/+kc0qJPHxVdEGw8FuGzpSQQyVuhr185hirq</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ConnectionString">
+      <Value>Server=tcp:collectiontrackerdbdbserver.database.windows.net,1433%3bInitial Catalog=CollectionTrackerDb%3bPersist Security Info=False%3bUser ID=manager%3bPassword=P%40ssw0rd!%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="CollectionTrackerAPI.Models.ApplicationDbContext">
+      <Value>Server=tcp:collectiontrackerdbdbserver.database.windows.net,1433%3bInitial Catalog=CollectionTrackerDb%3bPersist Security Info=False%3bUser ID=manager%3bPassword=P%40ssw0rd!%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

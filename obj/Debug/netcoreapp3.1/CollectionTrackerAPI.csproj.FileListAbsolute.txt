@@ -67,3 +67,7 @@ C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\Collect
 C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.dll
 C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.pdb
 C:\Users\pidgy\source\repos\CollectionTrackerAPI\obj\Debug\netcoreapp3.1\CollectionTrackerAPI.genruntimeconfig.cache
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.CollectionTrackerAPI - Web Deploy.json
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.CollectionTrackerMVC - Web Deploy.json
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\pidgy\source\repos\CollectionTrackerAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.CollectionTrackerMVC - Web Deploy1.json

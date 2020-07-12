@@ -1,0 +1,13 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "CollectionTrackerMVC20200711102702ResourceGroup"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "719ae02d-628e-4d54-a692-f9d6cea655cd"
+    }
+  }
+}

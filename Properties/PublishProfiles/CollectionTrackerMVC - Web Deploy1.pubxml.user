@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+Ap5NZmlfE+/p1DxIJUP4wAAAAACAAAAAAAQZgAAAAEAACAAAAAerxcQl1UHuqqaieXKQJ7LkyZydVkObV7+bqvnXZDPLwAAAAAOgAAAAAIAACAAAAAw85x/kmb1QqBE2ZpM7XbAAmtW1SELLuM0/Qa3ll02m4AAAABjb/Ln/wj+Oj84ttv3Xa8efV9ylZr0kJUspHPoHpaXlpJIsppDFoFrZdNn9gksjX5t8pena6K8vl0jD57U+uIefICAuhEzAfDEEX6TqCCNZS60BMZ6ntpuDrgVidvsD3wexL0GyNeqdrLtzQOs8nUjhAEcTwChodPiC+MG/R3Kk0AAAACl3Af6yuLQPlCSZltNJx3mPzK0jeBj7LegQ2FLTh/LQ7hyoGKaWjofMSU6g4erUuxOsHTe9zsmNmm3hGeuqCgp</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ConnectionString">
+      <Value>Data Source=tcp:collectiontrackerdbdbserver.database.windows.net,1433%3bInitial Catalog=CollectionTrackerDb%3bUser Id=sa%40collectiontrackerdbdbserver%3bPassword=P%40ssw0rd1</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
